@@ -33,7 +33,7 @@ plugins {
 }
 
 android {
-    namespace = "com.meowisai.music"
+    namespace = "com.metrolist.music"
     compileSdk = 37
 
     defaultConfig {
