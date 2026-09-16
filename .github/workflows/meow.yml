@@ -1,0 +1,22 @@
+name: Meow Build
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-java@v5
+        with:
+          java-version: "21"
+          distribution: "temurin"
+      - uses: gradle/actions/setup-gradle@v5
+      - run: chmod +x gradlew
+      - run: ./gradlew --console=plain assembleFossDebug --warning-mode summary -x lint
+      - uses: actions/upload-artifact@v6
+        with:
+          name: meowisai-apk
+          path: app/build/outputs/apk/foss/debug/*.apk
