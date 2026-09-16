@@ -17,7 +17,7 @@ object MeowLyricsProvider : LyricsProvider {
     override val name = "Meowisai"
 
     // ==== EDIT THESE TWO LINES ====
-    private const val WORKER_BASE = "https://varigal.starlasore.workers.dev/"
+    private const val WORKER_BASE = "https://varigal.starlasore.workers.dev"
     private const val API_KEY = "123"
     // ==============================
 
