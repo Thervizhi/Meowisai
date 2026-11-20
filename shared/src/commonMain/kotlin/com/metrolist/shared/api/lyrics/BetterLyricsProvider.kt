@@ -884,7 +884,7 @@ class UnisonProvider(
 
 private val lrcTimeTag = Regex("""\[(\d{1,2}):(\d{2})(?:[.:](\d{1,3}))?]""")
 
-private fun parseLrcToMlx(
+internal fun parseLrcToMlx(
     lrc: String,
     title: String,
     artist: String,

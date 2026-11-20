@@ -1927,6 +1927,8 @@
     <string name="brand_kugou" translatable="false">KuGou</string>
     <!-- Translators: Option or section label for Paxsenix in the settings. -->
     <string name="brand_paxsenix" translatable="false">Paxsenix</string>
+    <!-- Translators: Option or section label for Meowisai lyrics source in the settings. -->
+    <string name="brand_meowisai" translatable="false">Meowisai</string>
     <!-- Translators: Option or section label for runtime in the AI lyrics translation settings. -->
     <string name="ai_runtime">Runtime</string>
     <!-- Translators: Option or section label for same provider default in the AI lyrics translation settings. -->

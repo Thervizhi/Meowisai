@@ -494,6 +494,7 @@ fun List<YTItem>.filterPodcasts(hidePodcasts: Boolean): List<YTItem> = if (hideP
 enum class LyricsProvider {
     AUTO,
     USER,
+    MEOWISAI,
     LYPRIO,
     BETTERLYRICS,
     LRCRED,
@@ -510,7 +511,7 @@ enum class LyricsProvider {
         val alwaysLastFallbacks: List<LyricsProvider> = listOf(YOUTUBESUBTITLE, YOUTUBE)
 
         val userConfigurable: List<LyricsProvider> =
-            listOf(LYPRIO, BETTERLYRICS, LRCRED, UNISON, LRCLIB, KUGOU, PAXSENIX)
+            listOf(MEOWISAI, LYPRIO, BETTERLYRICS, LRCRED, UNISON, LRCLIB, KUGOU, PAXSENIX)
 
         private val legacyDefaultUserOrders =
             listOf(
@@ -527,6 +528,7 @@ enum class LyricsProvider {
             entries.find { it.name == t }?.let { return it }
             return when (t) {
                 "User" -> USER
+                "Meowisai" -> MEOWISAI
                 "Lyprio" -> LYPRIO
                 "BetterLyrics" -> BETTERLYRICS
                 "lrc.red" -> LRCRED
