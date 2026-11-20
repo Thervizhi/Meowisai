@@ -85,7 +85,7 @@ class AndroidPlayerPlatformServices(
 
     override fun copyText(text: String) {
         val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as? ClipboardManager ?: return
-        clipboard.setPrimaryClip(ClipData.newPlainText("Metrolist", text))
+        clipboard.setPrimaryClip(ClipData.newPlainText("Meowisai", text))
     }
 
     override suspend fun spotifyCanvas(
