@@ -759,6 +759,7 @@
     <!-- Translators: Brand name for the source repository host in the About screen. -->
     <string name="brand_github" translatable="false">GitHub</string>
     <!-- Translators: Imperative action label for credits view repo in the About screen. -->
+    <string name="brand_meowisai" translatable="false">Meowisai</string>
     <!-- Translators: Label for credits license name in the About screen. -->
     <string name="credits_license_name">License</string>
     <!-- Translators: Supporting text beneath the credits license option in the About screen. -->
@@ -1929,8 +1930,7 @@
     <string name="brand_kugou" translatable="false">KuGou</string>
     <!-- Translators: Option or section label for Paxsenix in the settings. -->
     <string name="brand_paxsenix" translatable="false">Paxsenix</string>
-    <!-- Translators: Option or section label for Meowisai lyrics source in the settings. -->
-    <string name="brand_meowisai" translatable="false">Meowisai</string>
+    <!-- Translators: Option or section label for Meowisai lyrics source in the settings. --> 
     <!-- Translators: Option or section label for runtime in the AI lyrics translation settings. -->
     <string name="ai_runtime">Runtime</string>
     <!-- Translators: Option or section label for same provider default in the AI lyrics translation settings. -->
