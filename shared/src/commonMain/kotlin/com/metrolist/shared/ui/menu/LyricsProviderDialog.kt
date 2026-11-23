@@ -79,6 +79,7 @@ import com.metrolist.shared.ui.tv.tvFocusHighlight
 import com.metrolist.shared.ui.utils.verticalScrollWithDrag
 import com.metrolist.shared.utils.formatDuration
 import org.jetbrains.compose.resources.stringResource
+import com.metrolist.shared.generated.resources.brand_meowisai
 
 @Composable
 fun LyricsProviderDialog(
