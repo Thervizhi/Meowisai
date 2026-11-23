@@ -752,6 +752,9 @@
     <!-- Translators: Label for credits collaborator; retained for translation compatibility but not currently referenced by app code. -->
     <!-- Translators: Label for discord in the multiple app screens. -->
     <string name="brand_discord" translatable="false">Discord</string>
+
+    <string name="brand_meowisai" translatable="false">Meowisai</string>
+    
     <!-- Translators: Label for telegram in the About screen. -->
     <string name="brand_telegram" translatable="false">Telegram</string>
     <!-- Translators: Brand name for the source repository host in the About screen. -->
