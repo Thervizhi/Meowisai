@@ -16,8 +16,8 @@ import kotlinx.coroutines.CancellationException
 class MeowLyricsProvider(
     private val httpClient: HttpClient,
 ) {
-    private const val WORKER_BASE = "https://varigal.starlasore.workers.dev"
-    private const val API_KEY = "123"
+    private val WORKER_BASE = "https://varigal.starlasore.workers.dev"
+    private val API_KEY = "123"
 
     suspend fun getLyrics(
         title: String,
