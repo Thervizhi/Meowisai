@@ -1,4 +1,4 @@
-name: Meow Build
+name: Meow Buildv2
 on:
   workflow_dispatch:
 permissions:
