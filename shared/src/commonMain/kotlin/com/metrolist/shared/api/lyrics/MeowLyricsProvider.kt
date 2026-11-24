@@ -147,13 +147,11 @@ class MeowLyricsProvider(
         return try {
             val content = line.trimStart('<').trimEnd('>')
             val parts = content.split("|")
-            val words = mutableListOf<MlxWord>()
+            val rawEntries = mutableListOf<MlxWord>()
 
             for (part in parts) {
                 if (part.isBlank()) continue
-                // Split on ':' but keep the word text intact (it may contain special chars)
-                // Format: word:startSec:endSec
-                // Find the last two ':' as timing delimiters
+                // Format: word:startSec:endSec — split on last two ':' delimiters
                 val lastColon = part.lastIndexOf(':')
                 if (lastColon <= 0) continue
                 val secondLastColon = part.lastIndexOf(':', lastColon - 1)
@@ -168,17 +166,19 @@ class MeowLyricsProvider(
 
                 val startMs = (startSec * 1000).toLong()
                 val endMs = (endSec * 1000).toLong()
-
-                // Detect trailing space: if the word text ends with a space or the next part starts differently
-                val hasTrailingSpace = wordText.endsWith(" ") || wordText.endsWith("\t")
                 val cleanText = wordText.trimEnd()
 
                 if (cleanText.isNotEmpty()) {
-                    words.add(MlxWord(cleanText, startMs, endMs, hasTrailingSpace))
+                    rawEntries.add(MlxWord(cleanText, startMs, endMs, hasTrailingSpace = true))
                 }
             }
 
-            if (words.isEmpty()) null else words
+            if (rawEntries.isEmpty()) return null
+
+            // Last word in the line should not have a trailing space
+            val lastIdx = rawEntries.size - 1
+            rawEntries[lastIdx] = rawEntries[lastIdx].copy(hasTrailingSpace = false)
+            rawEntries
         } catch (_: Exception) {
             null
         }
